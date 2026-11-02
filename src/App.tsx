@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import Header from "./components/Header";
+import BranchSelector from "./components/BranchSelector";
 const Placeholder = ({ name }: { name: string }) => (
   <div className="p-10">
     <p className="label-caps text-secondary">Atelier</p>
@@ -10,6 +11,8 @@ const Placeholder = ({ name }: { name: string }) => (
 export default function App() {
   return (
     <BrowserRouter>
+      <Header />
+      <BranchSelector />
       <Routes>
         {/* Customer */}
         <Route path="/" element={<Placeholder name="Home" />} />
