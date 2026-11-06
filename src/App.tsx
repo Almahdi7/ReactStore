@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import BranchSelector from "./components/BranchSelector";
+import Home from './pages/customer/Home'
+
 const Placeholder = ({ name }: { name: string }) => (
   <div className="p-10">
     <p className="label-caps text-secondary">Atelier</p>
@@ -15,7 +17,7 @@ export default function App() {
       <BranchSelector />
       <Routes>
         {/* Customer */}
-        <Route path="/" element={<Placeholder name="Home" />} />
+        <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Placeholder name="Shop" />} />
         <Route
           path="/product/:id"
