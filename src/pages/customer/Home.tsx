@@ -3,7 +3,7 @@ import Container from '../../components/Container'
 import ProductCard from '../../components/ProductCard'
 import { useBranch } from '../../context/BranchContext'
 import { useBranchProducts } from '../../hooks/useBranchProducts'
-
+  
 export default function Home() {
   const { selectedBranch } = useBranch()
   const { data: products = [], isLoading } = useBranchProducts()
