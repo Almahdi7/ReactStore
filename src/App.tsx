@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import BranchSelector from "./components/BranchSelector";
-import Home from './pages/customer/Home'
-import Shop from './pages/customer/Shop'
+import Home from "./pages/customer/Home";
+import Shop from "./pages/customer/Shop";
+import ProductDetails from "./pages/customer/ProductDetails";
 
 const Placeholder = ({ name }: { name: string }) => (
   <div className="p-10">
@@ -20,10 +21,7 @@ export default function App() {
         {/* Customer */}
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
-        <Route
-          path="/product/:id"
-          element={<Placeholder name="Product Details" />}
-        />
+        <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/cart" element={<Placeholder name="Cart (N)" />} />
         <Route path="/checkout" element={<Placeholder name="Checkout (N)" />} />
         <Route
